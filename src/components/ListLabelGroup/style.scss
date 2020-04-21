@@ -1,0 +1,88 @@
+@import "../../variables";
+
+.list-label-group {
+  padding-bottom: (17 / $df-fs) * $rem;
+
+  .label-group {
+    padding: (15 / $df-fs) * $rem (16 / $df-fs) * $rem;
+    background-color: var(--dusk-blue);
+  }
+
+  .list-group-item {
+    width: auto;
+    border-color: var(--white);
+    padding: (16 / $df-fs) * $rem (10 / $df-fs) * $rem (16 / $df-fs) * $rem (10 / $df-fs) * $rem;
+
+    .image-block {
+      width: (50 / $df-fs) * $rem;
+      height: (50 / $df-fs) * $rem;
+      display: inline-block;
+      border: 1px solid var(--cerulean);
+      margin-right: (8 / $df-fs) * $rem;
+      border-radius: 50%;
+      overflow: hidden;
+      .image{
+        width: 100%;
+      }
+    }
+
+    &.white {
+      background-color: var(--white);
+      color: var(--dusk-blue);
+    }
+  }
+
+  .list-group {
+    &.list-group-flush {
+      &:last-child {
+        .list-group-item {
+          &:last-child {
+            border-bottom-width: 1px;
+          }
+        }
+      }
+    }
+
+    &.transparent {
+      .list-group-item {
+        color: var(--white);
+        background-color: transparent;
+
+        &.white {
+          color: var(--dusk-blue);
+          background-color: var(--white);
+        }
+      }
+    }
+
+    &.white {
+      .list-group-item {
+        border-color: var(--charcoal-grey);
+      }
+    }
+
+    &.grey {
+      .list-group-item {
+        border-color: var(--charcoal-grey);
+
+        &.active {
+          background-color: var(--ugly-yellow);
+
+          .name {
+            font-weight: bold;
+          }
+
+          .icon-block {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .append-icon {
+    float: right;
+    font-size: (20 / $df-fs) * $rem;
+    line-height: 1;
+  }
+}

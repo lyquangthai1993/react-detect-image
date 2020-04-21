@@ -1,0 +1,137 @@
+@import "../../variables";
+/* Position and sizing of burger button */
+.bm-burger-button {
+  width: (20 / $df-fs) * $rem;
+  height: (20 / $df-fs) * $rem;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: var(--white);
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: var(--cool-grey);
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  left: (32 / $df-fs) * $rem !important;
+  top: (32 / $df-fs) * $rem !important;
+  text-align: center;
+
+  & > span {
+    position: static !important;
+  }
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background-color: var(--charcoal-grey);
+  vertical-align: middle;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  //position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background-color: var(--white);
+
+  .upper {
+    background: var(--light-periwinkle);
+    padding: (32 / $df-fs) * $rem;
+
+    .logo-wrapper {
+      margin-bottom: (26 / $df-fs) * $rem;
+
+      .logo {
+        margin-left: auto;
+      }
+    }
+
+    .user-info {
+      .avatar {
+        width: (40 / $df-fs) * $rem;
+        height: (40 / $df-fs) * $rem;
+        margin-right: (15 / $df-fs) * $rem;
+      }
+    }
+  }
+
+  .lower {
+    padding: (16 / $df-fs) * $rem;
+  }
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+/* Individual item */
+// .bm-item {
+
+// }
+
+.burger-menu-wrapper {
+  position: relative;
+
+  .input-group {
+    .input-group-text {
+      padding-right: (19 / $df-fs) * $rem;
+    }
+  }
+
+  @media (min-width: 576px) {
+    .list-group-append {
+      .list-group {
+        .list-group-item {
+          padding-left: (28 / $df-fs) * $rem;
+          padding-right: (27 / $df-fs) * $rem;
+        }
+      }
+    }
+  }
+
+  .app-version {
+    position: absolute;
+    bottom: (32 / $df-fs) * $rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+// Medium devices (tablets, 576px and up)
+@media (min-width: 576px) {
+  .bm-cross-button {
+    left: (16 / $df-fs) * $rem !important;
+    top: (16 / $df-fs) * $rem !important;
+  }
+
+  .bm-menu {
+    .upper {
+      padding: (16 / $df-fs) * $rem;
+    }
+  }
+}
+
+.bm-menu {
+  .list-group-append {
+    .list-group-item {
+      padding: (16 / $df-fs) * $rem (32 / $df-fs) * $rem;
+    }
+  }
+}

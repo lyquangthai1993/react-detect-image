@@ -1,0 +1,320 @@
+@import "variables";
+
+.underline {
+  text-decoration: underline;
+}
+
+.h1-white {
+  font-size: (34/$df-fs)*$rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  color: var(--white);
+}
+
+.h2-white {
+  font-size: (28/$df-fs)*$rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  color: var(--white);
+}
+
+.h2-blue {
+  font-size: (28/$df-fs)*$rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  color: var(--dusk-blue);
+}
+
+.intro-paragraph-blue {
+  font-size: (18/$df-fs)*$rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  color: var(--dusk-blue);
+}
+
+.h3-white-bold {
+  font-size: (18/$df-fs)*$rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  color: var(--white);
+}
+
+.intro-paragraph {
+  font-size: (18 / $df-fs) * $rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  color: var(--charcoal-grey);
+}
+
+.h3-blue {
+  font-size: (18/$df-fs)*$rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  color: var(--dusk-blue);
+}
+
+.h3-screen-heading {
+  font-size: (18/$df-fs)*$rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  color: var(--white);
+}
+
+.paragraph-heading-charcoal {
+  font-size: (15/$df-fs)*$rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: var(--charcoal-grey);
+}
+
+.h4-blue-bold {
+  font-size: (15/$df-fs)*$rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: (0.75/$df-fs)*$rem;
+  color: var(--dusk-blue);
+}
+
+.input-label-white {
+  font-size: (15/$df-fs)*$rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: var(--white);
+}
+
+.input-label-blue {
+  font-size: (15/$df-fs)*$rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: var(--dusk-blue);
+}
+
+.p-base {
+  font-size: (15/$df-fs)*$rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: var(--charcoal-grey);
+}
+
+.button-link-blue {
+  font-size: (15/$df-fs)*$rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: var(--dusk-blue);
+}
+
+.text-link-white {
+  font-size: (15/$df-fs)*$rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: var(--white);
+}
+
+.text {
+  font-size: (15/$df-fs)*$rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--charcoal-grey);
+}
+
+.input-placeholder {
+  font-size: (15/$df-fs)*$rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: var(--cool-grey);
+}
+
+.button-link-white {
+  font-size: (15/$df-fs)*$rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: var(--white);
+}
+
+.button-link-ocean-blue {
+  font-size: (15/$df-fs)*$rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: var(--cerulean);
+}
+
+.truck-product-number {
+
+  font-size: (13/$df-fs)*$rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--white);
+}
+
+.label-small-charcoal {
+  font-size: (13/$df-fs)*$rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  color: var(--charcoal-grey);
+}
+
+.label-small-blue {
+  font-size: (13/$df-fs)*$rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  color: var(--dusk-blue);
+}
+
+.warning-note {
+  font-size: (13/$df-fs)*$rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: var(--white);
+}
+
+.input-help-text-link {
+  font-size: (13/$df-fs)*$rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: var(--dusk-blue);
+}
+
+.input-help-text {
+  font-size: (13/$df-fs)*$rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: var(--charcoal-grey);
+}
+
+.text-link-small-blue {
+  font-size: (13/$df-fs)*$rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  color: var(--dusk-blue);
+}
+
+.paragraph-small {
+  font-size: (13/$df-fs)*$rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  color: var(--charcoal-grey);
+}
+
+.paragraph-small-text-link-white {
+  font-size: (13/$df-fs)*$rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: var(--white);
+}
+
+.paragraph-small-text-link {
+  font-size: (13/$df-fs)*$rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  color: var(--cerulean);
+}
+
+.button-smalls-white {
+  font-size: (13/$df-fs)*$rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  color: var(--white);
+}
+
+.mb-common {
+  margin-bottom: (8 / $df-fs) * $rem;
+}
+
+.pb-common {
+  padding-bottom: (8 / $df-fs) * $rem;
+}
+
+.underline-heading {
+  padding-bottom: (8 / $df-fs) * $rem;
+  border-bottom: 1px solid var(--charcoal-grey);
+}

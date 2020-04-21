@@ -1,0 +1,31 @@
+{/*<AsyncSelect*/}
+          {/*{...props}*/}
+          {/*components={{*/}
+            {/*IndicatorsContainer,*/}
+            {/*DropdownIndicator,*/}
+            {/*IndicatorSeparator,*/}
+            {/*Control: ControlComponent*/}
+          {/*}}*/}
+          {/*styles={customStyles}*/}
+          {/*isDisabled={props.disabled}*/}
+          {/*className={ClassNames("f-select-container", props.touched && props.error && "error-form")}*/}
+          {/*options={props.options}*/}
+          {/*loadOptions={props.loadOptions}*/}
+          {/*isClearable={false}*/}
+          {/*type={props.type}*/}
+          {/*value={props.value}*/}
+          {/*classNamePrefix={`f-select`}*/}
+          {/*blurInputOnSelect*/}
+          {/*name={props.name}*/}
+          {/*placeholder={props.placeholder || "Search ..."}*/}
+          {/*isSearchable={true}*/}
+          {/*closeMenuOnSelect={true}*/}
+          {/*closeMenuOnScroll={false}*/}
+          {/*defaultOptions={props.defaultOptions}*/}
+          {/*getOptionLabel={props.getOptionLabel}*/}
+          {/*getOptionValue={props.getOptionValue}*/}
+          {/*onBlur={props.onBlur}*/}
+          {/*onFocus={() => {*/}
+            {/*window.isInputFocus = true;*/}
+          {/*}}*/}
+        {/*/> */}

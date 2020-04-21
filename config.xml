@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="vn.co.react.detect.image.dev"
+        version="1.0.0"
+        xmlns="http://www.w3.org/ns/widgets"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0"
+>
+    <name>React cordova template</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@beesightsoft.com" href="https://beesightsoft.com">
+        ReactJS Team
+    </author>
+    <content src="index.html"/>
+    <preference name="StatusBarOverlaysWebView" value="false"/>
+    <preference name="StatusBarStyle" value="lightcontent"/>
+    <preference name="StatusBarBackgroundColor" value="#205a89"/>
+    <preference name="DisallowOverscroll" value="true"/>
+    <preference name="AndroidLaunchMode" value="singleTask"/>
+    <plugin name="cordova-plugin-whitelist" spec="1"/>
+    <plugin name="phonegap-plugin-barcodescanner"/>
+    <access origin="*"/>
+    <allow-intent href="http://*/*"/>
+    <allow-intent href="https://*/*"/>
+    <allow-intent href="tel:*"/>
+    <allow-intent href="sms:*"/>
+    <allow-intent href="mailto:*"/>
+    <allow-intent href="geo:*"/>
+    <hook type="before_build" src="scripts/readAppVersion.js"/>
+    <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='MainActivity']" mode="merge">
+        <activity android:windowSoftInputMode="adjustResize"/>
+    </edit-config>
+    <platform name="android">
+        <preference name="android-build-tool" value="gradle"/>
+        <variable name="CAMERA_USAGE_DESCRIPTION" value="need camera access to take pictures"/>
+        <allow-intent href="market:*"/>
+    </platform>
+
+    <platform name="ios">
+        <allow-intent href="itms:*"/>
+        <allow-intent href="itms-apps:*"/>
+        <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+            <string>To scan barcodes</string>
+        </edit-config>
+    </platform>
+</widget>

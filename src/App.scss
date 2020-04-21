@@ -1,0 +1,313 @@
+// LIBRARY CSS
+@import "variables";
+@import "~sanitize.css/sanitize.css";
+@import "~normalize.css/normalize.css";
+@import "~react-toastify/dist/ReactToastify.min.css";
+@import "~react-datepicker/dist/react-datepicker.css";
+@import "~animate.css/animate.min.css";
+@import "~bootstrap/scss/bootstrap";
+//--------------------------------------------------------
+@import "fonts";
+@import "text-style.scss";
+@import "screens/request-page.scss";
+
+/*///////////////////////////////////////////////////////////////
+/////                    ROOT COLOR                         /////
+///////////////////////////////////////////////////////////////*/
+:root {
+  --white: #ffffff;
+  --dusk-blue: #28628e;
+  --dark-blue: #002855;
+  --cerulean: #009ac7;
+  --charcoal-grey: #414042;
+  --ugly-yellow: #c4d600;
+  --reddish-orange: #ff671f;
+  --ice-blue: #edeeee;
+  --sun-yellow: #fbe122;
+  --light-periwinkle: #dcddde;
+  --lipstick: #e31c79;
+  --black: #000000;
+  --cool-grey: #a7a9ac;
+  --error: #de1f1f;
+  --bg-error: #fddada;
+  --text-error: #ea7676;
+}
+
+// !SETTING FOR BOOTSTRAP FOCUS INPUT, BUTTON, TEXTAREA SHOW BLUE BORDER
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+*:focus,
+.btn.active {
+  outline: 0 !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+  outline-color: transparent !important;
+}
+
+input,
+textarea {
+  &:read-only {
+    user-select: none;
+    pointer-events: none;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  font-size: (15 / $df-fs) * $rem;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
+  @media (max-width: 575px) {
+    font-size: (13 / $tablet-fs) * $rem;
+  }
+
+  //fix IOS mobile
+  &.modal-open {
+    position: fixed;
+    width: 100%;
+  }
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    color: var(--charcoal-grey);
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.gradient-blue {
+  background-image: linear-gradient(
+                  to bottom,
+                  var(--dusk-blue) 28%,
+                  var(--dark-blue) 118%
+  );
+}
+
+.error-block {
+  font-size: (13 / $df-fs) * $rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--error);
+  background-color: var(--bg-error);
+  padding: (16 / $df-fs) * $rem (29 / $df-fs) * $rem;
+  border-radius: 5px;
+}
+
+.input-field-error {
+  font-size: (13 / $df-fs) * $rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--error);
+  margin-top: (8 / $df-fs) * $rem;
+}
+
+.error-text {
+  color: var(--error) !important;
+}
+
+input,
+.form-control,
+.input-group {
+  &.error {
+    color: var(--error) !important;
+    border-color: var(--error) !important;
+    background-color: var(--bg-error) !important;
+  }
+
+  &:read-only {
+    user-select: none;
+  }
+
+  &.br-tpr {
+    border-right-color: transparent !important;
+  }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.padding-lr-responsive {
+  @media (min-width: 576px) {
+    padding-left: (32 / $df-fs) * $rem !important;
+    padding-right: (32 / $df-fs) * $rem !important;
+  }
+  @media (max-width: 575px) {
+    padding-left: (16 / $df-fs) * $rem !important;
+    padding-right: (16 / $df-fs) * $rem !important;
+  }
+}
+
+.padding-tb-responsive {
+  @media (min-width: 576px) {
+    padding-top: (32 / $df-fs) * $rem;
+    padding-bottom: (32 / $df-fs) * $rem;
+  }
+  @media (max-width: 575px) {
+    padding-top: (16 / $df-fs) * $rem;
+    padding-bottom: (16 / $df-fs) * $rem;
+  }
+}
+
+.margin-minus-tb-responsive {
+  @media (min-width: 576px) {
+    margin-top: (-32 / $df-fs) * $rem;
+    margin-bottom: (-32 / $df-fs) * $rem;
+  }
+  @media (max-width: 575px) {
+    margin-top: (-16 / $df-fs) * $rem;
+    margin-bottom: (-16 / $df-fs) * $rem;
+  }
+}
+
+.margin-minus-lr-responsive {
+  @media (min-width: 576px) {
+    margin-left: (-32 / $df-fs) * $rem;
+    margin-right: (-32 / $df-fs) * $rem;
+  }
+  @media (max-width: 575px) {
+    margin-left: (-16 / $df-fs) * $rem;
+    margin-right: (-16 / $df-fs) * $rem;
+  }
+}
+
+.p-t-16 {
+  padding-top: (16 / $df-fs) * $rem;
+}
+
+.p-b-16 {
+  padding-bottom: (16 / $df-fs) * $rem;
+}
+
+button,
+.btn {
+  &:active {
+    opacity: 0.5 !important;
+  }
+
+  &:hover {
+    color: var(--white);
+  }
+}
+
+.my-toast-container {
+  bottom: 0;
+  padding: 0;
+}
+
+.my-toast {
+  max-width: (288 / $df-fs) * $rem;
+  margin: 0 auto;
+  min-height: (45 / $df-fs) * $rem;
+
+  .my-toast-body {
+  }
+}
+
+.image-product {
+  width: (60 / $df-fs) * $rem;
+  height: (60 / $df-fs) * $rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.image-cropper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: var(--white);
+  border: 2px solid rgba(#89d4e3, 0.25);
+}
+
+.profile-pic {
+  display: inline;
+  margin: 0 auto;
+  margin-top: 25%; //centers the image
+  height: auto;
+  width: 100%;
+}
+
+.menu-right-side {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.mb-16 {
+  margin-bottom: (16 / $df-fs) * $rem !important;
+}
+
+.mb-8 {
+  margin-bottom: (8 / $df-fs) * $rem !important;
+}
+
+.p-16 {
+  padding: (16 / $df-fs) * $rem;
+}
+
+.btn-xs-block {
+  @media (max-width: 575px) {
+    width: 100%;
+  }
+}
+
+.image-center-vertical {
+  .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  img {
+    vertical-align: middle;
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+
+.lh-1 {
+  line-height: 1;
+}
+
+.bt-charcoal-grey {
+  padding-bottom: (8/$df-fs)*$rem;
+  border-bottom: solid 1px var(--charcoal-grey);
+}
+
+.fw-mobile {
+  @media (max-width: 575px) {
+    width: 100% !important;
+  }
+}

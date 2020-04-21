@@ -1,0 +1,36 @@
+@import "../../variables";
+
+.patient-weight {
+  margin-bottom: (16 / $df-fs) * $rem;
+
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+
+  }
+
+  .text-box-wrapper {
+    max-width: (144 / $df-fs) * $rem;
+  }
+
+  .form-control {
+    text-align: right;
+
+    &.error {
+      color: var(--error);
+    }
+  }
+
+  .text-box-wrapper {
+    margin-bottom: 0;
+
+    &.error {
+      margin-bottom: (8 / $df-fs) * $rem;
+    }
+  }
+
+  .input-group-text {
+    padding-left: (21 / $df-fs) * $rem;
+    padding-right: (21 / $df-fs) * $rem;
+  }
+}

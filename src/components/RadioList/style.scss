@@ -1,0 +1,40 @@
+@import "../../variables";
+
+.radio-list-wrapper {
+  label {
+    margin: 0;
+    line-height: 1;
+  }
+
+  .label {
+    margin-bottom: (8 / $df-fs) * $rem;
+  }
+
+  .base-input {
+    display: none;
+  }
+
+  .option-wrapper {
+    margin-bottom: (16 / $df-fs) * $rem;
+  }
+
+  .radio-icon {
+    margin-right: (8 / $df-fs) * $rem;
+    font-size: (20 / $df-fs) * $rem;
+    line-height: 1;
+    vertical-align: middle;
+  }
+
+  .base-label {
+    line-height: (20 / $df-fs) * $rem;
+    vertical-align: middle;
+  }
+
+  &.error {
+    .icon,
+    .radio-icon {
+      color: var(--error);
+      background-color: var(--bg-error);
+    }
+  }
+}

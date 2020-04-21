@@ -1,0 +1,76 @@
+@import "../../variables";
+
+.base-checkbox-circle {
+  label {
+    margin: 0;
+    line-height: 1;
+  }
+
+  .base-input {
+    display: none;
+
+    + .base-span {
+      cursor: pointer;
+      vertical-align: middle;
+
+      &::before {
+        content: '\e9ae';
+        color: transparent;
+        background-color: var(--pale-grey);
+        speak: none;
+        font-style: normal;
+        font-size: 16px;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+
+    &:checked {
+      + .base-span {
+        &::before {
+          content: '\e9af';
+          color: var(--cerulean);
+        }
+      }
+    }
+
+    &:disabled {
+      + .base-span {
+        background: rgba(0, 0, 0, .35);
+      }
+    }
+  }
+
+  .base-label {
+    margin-left: (8 / $df-fs) * $rem;
+
+    //not allow user select text
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Likely future */
+  }
+
+  .children {
+    margin-left: 4px;
+  }
+.icon{
+  font-size: (20 / $df-fs) * $rem;
+}
+  &.error {
+    .icon {
+      color: var(--error);
+      background-color: var(--bg-error);
+      box-shadow: inset 0 0 0 3px #ffffff;
+      width: 20px;
+    }
+  }
+}

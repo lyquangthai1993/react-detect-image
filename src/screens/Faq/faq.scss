@@ -1,0 +1,30 @@
+@import "../../variables";
+
+.faq-wrapper {
+  .left-side-component {
+    .p-base {
+      font-weight: bold;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .right-side-component {
+      padding-top: 0 !important;
+
+      .intro-paragraph {
+        margin-left: (-16 / $df-fs) * $rem;
+        margin-right: (-16 / $df-fs) * $rem;
+        margin-bottom: (16 / $df-fs) * $rem;
+        padding: (16 / $df-fs) * $rem;
+        background-color: var(--light-periwinkle);
+      }
+    }
+  }
+  @media (min-width: 576px) {
+    .template-menu-left-wrapper {
+      height: calc(100vh - #{$heightHeader});
+      height: calc(var(--vh, 1vh) * 100 - #{$heightHeader});
+    }
+
+  }
+}

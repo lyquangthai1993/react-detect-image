@@ -1,0 +1,13 @@
+@import "../../variables";
+
+.menu-base-role-wrapper {
+  .menu-parent {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+
+    @media (min-width: 576px) {
+      max-width: $widthMenuBaseRole;
+    }
+  }
+}

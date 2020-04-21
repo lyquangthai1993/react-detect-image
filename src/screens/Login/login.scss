@@ -1,0 +1,60 @@
+@import "../../variables";
+
+.login-wrapper {
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  position: relative;
+
+  .upper-wrapper {
+    $top: (157 / $df-fs) * $rem;
+    position: absolute;
+    top: $top;
+    left: (16 / $df-fs) * $rem;
+    right: (16 / $df-fs) * $rem;
+    margin: auto;
+    overflow-y: auto;
+    height: calc(var(--vh, 1vh) * 100 - #{((40 / $df-fs) * $rem)} - #{$top});
+    //min-height: calc(100% - #{$top});
+
+    .logo {
+      margin-bottom: (8 / $df-fs) * $rem;
+    }
+
+    .hiring {
+      font-size: (22 / $df-fs) * $rem;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.86;
+      letter-spacing: normal;
+      color: var(--white);
+      margin-bottom: (32 / $df-fs) * $rem;
+    }
+
+    .btn-login {
+      border: solid 1px var(--white);
+      padding: (13 / $df-fs) * $rem (20 / $df-fs) * $rem;
+      background-color: transparent;
+      margin-bottom: (24 / $df-fs) * $rem;
+    }
+  }
+
+  @media (min-width: 576px) {
+    .upper-wrapper {
+      max-width: (400 / $df-fs) * $rem;
+
+      .logo {
+        width: (300 / $df-fs) * $rem;
+      }
+
+      .hiring {
+        font-size: (32 / $df-fs) * $rem;
+      }
+    }
+
+  }
+}

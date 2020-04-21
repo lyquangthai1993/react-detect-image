@@ -1,0 +1,18 @@
+@import "../../variables";
+
+.size-option-wrapper {
+  .product-option {
+    .size-option-group {
+      margin-bottom: (8 / $df-fs) * $rem;
+    }
+  }
+
+  .btn-group-justify {
+
+    .btn {
+      -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+      -ms-flex-positive: 1;
+    }
+  }
+}

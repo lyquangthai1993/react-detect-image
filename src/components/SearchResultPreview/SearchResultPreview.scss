@@ -1,0 +1,14 @@
+@import "../../variables";
+
+.search-result-preview-wrapper {
+
+  .multiple-result {
+    .introduction {
+      margin-bottom: (16 / $df-fs) * $rem;
+
+      .label {
+        margin-bottom: (8 / $df-fs) * $rem;
+      }
+    }
+  }
+}

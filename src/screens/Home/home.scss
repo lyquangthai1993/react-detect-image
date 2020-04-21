@@ -1,0 +1,63 @@
+@import "../../variables";
+
+.bm-burger-button {
+  display: inline-block;
+  position: absolute;
+  overflow: hidden;
+  margin-left: auto;
+  top: (18 / $df-fs) * $rem;
+  right: (16 / $df-fs) * $rem;
+}
+
+.home-wrapper {
+  $footerHeight: (40 / $df-fs) * $rem;
+  position: relative;
+  height: calc(100vh);
+  /* Use vh as a fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  background-color: var(--dusk-blue);
+
+  @media (max-width: 468px) {
+    background-image: none;
+  }
+
+  @media (min-width: 468px) {
+    .bm-burger-button {
+      top: (32 / $df-fs) * $rem;
+      right: (32 / $df-fs) * $rem;
+    }
+  }
+
+  .welcome-section {
+    padding: (72 / $df-fs) * $rem (16 / $df-fs) * $rem 0;
+    margin-bottom: (24 / $df-fs) * $rem;
+  }
+
+  .header-wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-right: (55 / $df-fs) * $rem;
+
+    .logo-block {
+      padding: (18 / $df-fs) * $rem 0 (16 / $df-fs) * $rem (16 / $df-fs) * $rem;
+    }
+
+    @media (min-width: 468px) {
+      padding-right: (36 / $df-fs) * $rem;
+      .bm-burger-button {
+        top: (32 / $df-fs) * $rem;
+        right: (32 / $df-fs) * $rem;
+      }
+      .logo-block {
+        padding-top: (32 / $df-fs) * $rem;
+      }
+    }
+  }
+
+  .footer {
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+  }
+}

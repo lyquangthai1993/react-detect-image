@@ -1,0 +1,46 @@
+@import "../../variables";
+
+.product-detail-popup-wrapper {
+  .modal-dialog {
+    max-width: (272 / $df-fs) * $rem;
+    margin: auto;
+  }
+  .modal-content {
+    padding-top: (24 / $df-fs) * $rem;
+    padding-bottom: (24 / $df-fs) * $rem;
+    > * {
+      margin-bottom: (16 / $df-fs) * $rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: 0 (24 / $df-fs) * $rem;
+  }
+  .modal-footer {
+    > * {
+      margin: 0;
+      margin-bottom: (16 / $df-fs) * $rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  img {
+    vertical-align: middle;
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+.image-item {
+  height: (150 / $df-fs) * $rem;
+}

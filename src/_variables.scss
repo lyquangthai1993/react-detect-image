@@ -1,0 +1,114 @@
+$font-primary: 'OpenSans';
+
+// Font-size
+$df-fs: 16;
+$tablet-fs: 18;
+$rem: 1rem;
+$vw: 1vw;
+
+$font-size-base: (13 / $df-fs) * $rem;
+
+$widthMenuLeft: (418 / $df-fs) * $rem;
+$heightHeader: (62 / $df-fs) * $rem;
+$heightHeaderMobile: (89 / $df-fs) * $rem;
+$widthMenuBaseRole: (468 / $df-fs) * $rem;
+
+// Brand colors
+$app_royal_blue: #28628E;
+$app_prussian: #002855;
+$app_ocean: #009AC7;
+$app_sky: #89D4E3;
+$app_charcoal: #414042;
+$app_steel: #A7A9AC;
+$app_titan: #DCDDDE;
+$app_bright_yellow: #FBE122;
+$app_orange: #FF671F;
+$app_lime: #C4D600;
+$app_cousteau: #00C1D5;
+$app_rose: #E31C79;
+$app_violet: #753BBD;
+$app_white: #FFFFFF;
+
+
+.bg-ugly-yellow {
+  background-color: var(--ugly-yellow);
+}
+
+.bg-ice-blue {
+  background-color: var(--ice-blue);
+}
+
+.bg-dark-blue {
+  background-color: var(--dark-blue);
+}
+
+.bg-light-periwinkle {
+  background-color: var(--light-periwinkle);
+}
+.color-error{
+  color: var(--error);
+}
+.color-light-periwinkle {
+  color: var(--light-periwinkle);
+}
+
+.color-charcoal-grey {
+  color: var(--charcoal-grey);
+}
+
+.bg-dusk-blue {
+  background-color: var(--dusk-blue) !important;
+  color: var(--white) !important;
+}
+
+.bg-cerulean {
+  background-color: var(--cerulean);
+}
+
+.color-dusk-blue {
+  color: var(--dusk-blue);
+}
+
+.color-cerulean {
+  color: var(--cerulean);
+}
+
+.color-reddish-orange {
+  color: var(--reddish-orange);
+}
+
+@mixin btnColor($bgColor, $color: #fff) {
+  background-color: $bgColor !important;
+  color: $color !important;
+  padding-top: (12 / $df-fs) * $rem;
+  padding-bottom: (12 / $df-fs) * $rem;
+}
+
+.btn {
+  &.btn-outline-main {
+    border-color: var(--dusk-blue);
+    @include btnColor(#fff, var(--dusk-blue));
+
+    &:hover {
+      color: var(--charcoal-grey);
+    }
+    &.active{
+      @include btnColor(var(--dusk-blue), #fff);
+    }
+  }
+
+  &.btn-outline-cool-grey {
+    border-color: var(--cool-grey);
+    @include btnColor(#fff, var(--charcoal-grey));
+
+    &:hover {
+      color: var(--dusk-blue);
+    }
+  }
+
+  &.btn-secondary {
+    @include btnColor(var(--light-periwinkle), var(--charcoal-grey));
+    border-color: var(--light-periwinkle);
+  }
+}
+

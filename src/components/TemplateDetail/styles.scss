@@ -1,0 +1,75 @@
+@import "../../variables";
+
+.template-detail-wrapper {
+  overflow: hidden;
+  .header-detail-page-wrapper {
+    //position: fixed;
+    //top: 0;
+    //left: 0;
+    //right: 0;
+    //z-index: 1049;
+    .title-page {
+      @media (min-width: 576px) {
+        font-size: (22 / $df-fs) * $rem;
+      }
+    }
+  }
+
+  .bm-burger-button {
+    width: (23 / $df-fs) * $rem;
+    top: (19 / $df-fs) * $rem;
+    right: (32 / $df-fs) * $rem;
+    position: absolute;
+    @media (max-width: 575px) {
+      right: (16 / $df-fs) * $rem;
+    }
+  }
+
+  .upper {
+    padding: (13 / $df-fs) * $rem (16 / $df-fs) * $rem;
+    position: relative;
+    @media (min-width: 576px) {
+      padding: (19 / $df-fs) * $rem (32 / $df-fs) * $rem (19 / $df-fs) * $rem (32 / $df-fs) * $rem;
+
+      .title-page {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-weight: 300;
+      }
+      .logo-block {
+        .logo {
+          margin-right: (55 / $df-fs) * $rem;
+        }
+      }
+    }
+
+    .button {
+      margin-bottom: (16 / $df-fs) * $rem;
+      @media (min-width: 576px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .children-bidding {
+    overflow: auto;
+    //margin-top: $heightHeader;
+    height: calc(100vh - #{$heightHeader});
+    height: calc(var(--vh, 1vh) * 100 - #{$heightHeader});
+    position: relative;
+
+    //overflow: hidden;
+    @media (max-width: 575px) {
+      //margin-top: $heightHeaderMobile;
+      height: calc(100vh - #{$heightHeaderMobile});
+      height: calc(var(--vh, 1vh) * 100 - #{$heightHeaderMobile});
+    }
+  }
+
+  .icon-return {
+    font-size: (16 / $df-fs) * $rem;
+    margin-right: (8 / $df-fs) * $rem;
+    line-height: 1;
+  }
+}

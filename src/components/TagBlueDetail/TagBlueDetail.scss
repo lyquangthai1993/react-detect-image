@@ -1,0 +1,19 @@
+@import "../../variables";
+
+.tag-blue-detail-wrapper {
+  padding: (16 / $df-fs) * $rem;
+  border-bottom: 1px solid var(--charcoal-grey);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &.dusk-blue {
+    background-color: var(--dusk-blue);
+    border-color: var(--white) !important;
+    * {
+      color: var(--white) !important;
+
+    }
+  }
+}

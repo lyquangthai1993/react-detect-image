@@ -1,0 +1,31 @@
+@import "../../variables";
+
+.about-us-wrapper {
+  .detail {
+    padding: (24 / $df-fs) * $rem (16 / $df-fs) * $rem (63 / $df-fs) * $rem;
+    @media (min-width: 576px) {
+      * {
+        font-size: (18 / $df-fs) * $rem !important;
+      }
+    }
+
+    .logo {
+      @media (min-width: 576px) {
+        width: (335 / $df-fs) * $rem;
+      }
+      width: (150 / $df-fs) * $rem;
+      margin-bottom: (16 / $df-fs) * $rem;
+    }
+  }
+
+  .content {
+    margin-bottom: (16 / $df-fs) * $rem;
+  }
+
+  .label-small-charcoal {
+    width: (72 / $df-fs) * $rem;
+    @media (min-width: 576px) {
+      width: ((77+32) / $df-fs) * $rem;
+    }
+  }
+}

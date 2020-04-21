@@ -1,0 +1,48 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# webstorm config file
+yarn.lock
+package-lock.json
+
+# cli generate
+generate-react-cli.json
+
+# eslint
+# .eslintrc.js
+
+# prettier
+# .prettierrc.js
+
+# PhpStorm
+.idea
+
+# VSCode
+.vscode
+
+# phonegap
+# phonegap/node_modules/
+www/**
+plugins/*/**
+platforms/**
+homepage.json

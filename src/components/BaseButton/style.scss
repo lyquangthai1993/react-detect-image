@@ -1,0 +1,34 @@
+@import "../../variables";
+
+.base-button {
+  .btn {
+    border-radius: 0;
+  }
+
+  .btn-main {
+    @include btnColor(var(--dark-blue), var(--white));
+    &:disabled {
+      @include btnColor(var(--light-periwinkle), #b4b6b8);
+    }
+  }
+
+  .btn-dusk-blue {
+    @include btnColor(var(--dusk-blue), var(--white));
+
+    &:disabled {
+      @include btnColor(var(--light-periwinkle), #b4b6b8);
+    }
+  }
+
+  .btn-orange {
+    @include btnColor(var(--reddish-orange), var(--white));
+  }
+
+  .btn-transparent {
+    @include btnColor(transparent, var(--white));
+  }
+
+  .btn-white {
+    @include btnColor(var(--white), var(--dusk-blue));
+  }
+}

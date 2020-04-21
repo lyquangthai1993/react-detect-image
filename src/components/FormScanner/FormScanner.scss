@@ -1,0 +1,25 @@
+@import "../../variables";
+
+.form-scanner-wrapper {
+  .barcode-enter {
+    box-shadow: -3px 0 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: var(--white);
+    padding: (16 / $df-fs) * $rem;
+
+    .text-box-wrapper {
+      display: inline-block;
+      width: (190 / $df-fs) * $rem;
+      margin-right: (8 / $df-fs) * $rem;
+      vertical-align: top;
+    }
+
+    .base-button {
+      display: inline-block;
+      vertical-align: top;
+      .btn {
+        line-height: 1.333;
+        width: (90 / $df-fs) * $rem;
+      }
+    }
+  }
+}

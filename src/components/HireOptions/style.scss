@@ -1,0 +1,23 @@
+@import "../../variables";
+
+.hire-option-wrapper {
+  padding: (16 / $df-fs) * $rem (24 / $df-fs) * $rem;
+
+  .option-item {
+    cursor: pointer;
+    border-bottom: 1px solid var(--white);
+    padding: (16 / $df-fs) * $rem (8 / $df-fs) * $rem;
+
+    &.grey {
+      background-color: var(--ice-blue);
+      color: var(--charcoal-grey);
+      border-color: var(--ice-blue);
+    }
+
+    .icon-prepend {
+      margin-right: (8 / $df-fs) * $rem;
+      width: (20 / $df-fs) * $rem;
+      text-align: center;
+    }
+  }
+}

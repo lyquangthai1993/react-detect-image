@@ -1,0 +1,65 @@
+@import "../../variables";
+
+.success-page-wrapper {
+  position: relative;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  background-color: var(--dusk-blue);
+  background-size: cover;
+  background-image: linear-gradient(to left, rgba(0, 104, 166, 0.5) 115%, var(--dark-blue) 12%),
+  url("../../images/mainmenu_bg_tablet.png");
+  background-image: url("../../images/mainmenu_bg_tablet.png");
+
+  @media (max-width: 575px) {
+    background-size: auto 100%;
+  }
+
+  .logo-block {
+    float: right;
+
+    .logo {
+      width: (100 / $df-fs) * $rem;
+    }
+
+    @media (min-width: 576px) {
+      display: none;
+    }
+    @media (max-width: 575px) {
+      padding-top: (18 / $df-fs) * $rem;
+      padding-right: (16 / $df-fs) * $rem;
+    }
+  }
+
+  .content {
+    padding-top: (127 / $df-fs) * $rem;
+    max-width: (386 / $df-fs) * $rem;
+    @media (min-width: 576px) {
+      margin-left: (114 / $df-fs) * $rem;
+    }
+    @media (max-width: 575px) {
+      padding-left: (16 / $df-fs) * $rem;
+      padding-right: (16 / $df-fs) * $rem;
+    }
+
+    .btn-block {
+      vertical-align: middle;
+      line-height: (20 / $df-fs) * $rem;
+      margin-bottom: (16 / $df-fs) * $rem;
+    }
+
+    .icon {
+      font-size: (20 / $df-fs) * $rem;
+    }
+  }
+
+  .border-block {
+    border-bottom: solid 1px var(--white);
+    padding-bottom: (24 / $df-fs) * $rem;
+    margin-bottom: (24 / $df-fs) * $rem;
+  }
+
+  h3 {
+    margin-top: (16 / $df-fs) * $rem;
+    //margin-bottom: (24 / $df-fs) * $rem;
+  }
+}

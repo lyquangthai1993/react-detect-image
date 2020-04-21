@@ -1,0 +1,34 @@
+@import "../../variables";
+
+.search-result-panel-wrapper {
+  .heading {
+    font-size: (22 / $df-fs) * $rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: 0.01px;
+    color: var(--dusk-blue);
+  }
+
+  .below-wrapper {
+    background-color: var(--white);
+    padding: (16 / $df-fs) * $rem (20 / $df-fs) * $rem;
+    min-height: (265 / $df-fs) * $rem;
+  }
+
+  .clear {
+    position: absolute;
+    right: (32 / $df-fs) * $rem;
+    top: (38 / $df-fs) * $rem;
+  }
+
+  .single-result {
+    .list-group-item {
+      padding: (16 / $df-fs) * $rem;
+      margin: (-16 / $df-fs) * $rem;
+    }
+  }
+
+
+}

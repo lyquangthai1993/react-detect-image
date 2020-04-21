@@ -1,0 +1,123 @@
+{
+  "name": "vn.co.react.detect.image.dev",
+  "displayName": "React detect image",
+  "homepage": ".",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "phonegap:clean": "rimraf www",
+    "phonegap:www": "node scripts/copy-www.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build && npm run phonegap:clean && npm run phonegap:www",
+    "build:web": "PUBLIC_URL=http://web.com/ react-scripts build",
+    "build:android": "npm run build && cordova build android",
+    "build:ios": "npm run build && cordova build ios",
+    "build:phonegap": "npm run build && cordova build",
+    "test": "react-scripts test && echo \"Error: no test specified\" && exit 1",
+    "eject": "react-scripts eject",
+    "generate": "plop",
+    "sync:android": "cordova platform remove android && cordova platform add android && npm run build:android"
+  },
+  "private": true,
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.22",
+    "@fortawesome/free-brands-svg-icons": "^5.10.2",
+    "@fortawesome/free-regular-svg-icons": "^5.10.2",
+    "@fortawesome/free-solid-svg-icons": "^5.10.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@material-ui/core": "^4.9.5",
+    "@material-ui/icons": "^4.5.1",
+    "animate.css": "^3.7.2",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "classnames": "^2.2.6",
+    "copy": "^0.3.2",
+    "cordova-android": "^8.1.0",
+    "cordova-custom-config": "^5.1.0",
+    "cordova-ios": "^5.1.1",
+    "cordova-plugin-customurlscheme": "^5.0.1",
+    "cordova-plugin-dialogs": "^2.0.2",
+    "cordova-plugin-keyboard": "^1.2.0",
+    "cordova-plugin-network-information": "^2.0.2",
+    "cordova-plugin-safariviewcontroller": "^1.6.0",
+    "cordova-plugin-screen-orientation": "^3.0.2",
+    "cordova-plugin-statusbar": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "es6-promise-plugin": "^4.2.2",
+    "formik": "1.5.8",
+    "history": "^4.10.1",
+    "jwt-decode": "^2.2.0",
+    "localforage": "^1.7.3",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.28",
+    "node-sass": "^4.13.1",
+    "normalize.css": "^8.0.1",
+    "phonegap-plugin-barcodescanner": "^8.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.0",
+    "react-animated-css": "^1.2.1",
+    "react-bootstrap": "^1.0.0-beta.17",
+    "react-burger-menu": "^2.6.13",
+    "react-datepicker": "^2.13.0",
+    "react-device-detect": "^1.11.14",
+    "react-dom": "^16.13.0",
+    "react-number-format": "^4.4.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.0",
+    "react-select": "^3.1.0",
+    "react-toastify": "5.4.1",
+    "react-transition-group": "^4.3.0",
+    "reactjs-popup": "^1.5.0",
+    "sanitize.css": "^11.0.0",
+    "styled-components": "^4.4.1",
+    "xml2js": "^0.4.23",
+    "yup": "^0.28.0"
+  },
+  "cordova": {
+    "id": "vn.co.react.detect.image.dev",
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-screen-orientation": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-safariviewcontroller": {},
+      "phonegap-plugin-barcodescanner": {},
+      "cordova-plugin-keyboard": {}
+    },
+    "platforms": [
+      "ios"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cordova-plugin-whitelist": "^1.3.4",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "plop": "^2.5.3",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.2"
+  }
+}

@@ -1,0 +1,9 @@
+@import '../../variables';
+
+.header-detail-page-wrapper {
+  .logo-block {
+    .logo {
+      width: (100/$df-fs)*$rem;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import "../../variables";
+
+.list-group-append {
+  .list-group-item {
+    width: auto;
+    border-color: var(--white);
+    padding: (15 / $df-fs) * $rem (10 / $df-fs) * $rem (15 / $df-fs) * $rem
+      (10 / $df-fs) * $rem;
+
+    &.white {
+      background-color: var(--white);
+      color: var(--dusk-blue);
+    }
+  }
+
+  .list-group {
+    &.list-group-flush {
+      &:last-child {
+        .list-group-item {
+          &:last-child {
+            border-bottom-width: 1px;
+          }
+        }
+      }
+    }
+    &.transparent {
+      .list-group-item {
+        color: var(--white);
+        background-color: transparent;
+        &.white {
+          color: var(--dusk-blue);
+          background-color: var(--white);
+        }
+      }
+    }
+
+    &.white {
+      .list-group-item {
+        border-color: var(--charcoal-grey);
+      }
+    }
+  }
+
+  .append-icon {
+    float: right;
+    font-size: (20 / $df-fs) * $rem;
+    line-height: 1;
+  }
+
+  .prepend-icon {
+    margin-right: (8 / $df-fs) * $rem;
+    line-height: 1;
+    //width: (20/$df-fs)*$rem;
+    height: auto;
+  }
+}

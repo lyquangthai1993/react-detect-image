@@ -1,0 +1,23 @@
+@import "../../variables";
+
+.product-item-wrapper {
+  .image-block {
+    .image {
+      height: (50 / $df-fs) * $rem;
+      width: (50 / $df-fs) * $rem;
+      display: inline-block;
+      border: 1px solid var(--cerulean);
+      margin-right: (8 / $df-fs) * $rem;
+    }
+  }
+
+  .text-box-wrapper {
+    max-width: (50 / $df-fs) * $rem;
+    margin-right: (16 / $df-fs) * $rem;
+  }
+
+  .icon-delete{
+    color: var(--reddish-orange);
+    font-size: (20 / $df-fs) * $rem;
+  }
+}

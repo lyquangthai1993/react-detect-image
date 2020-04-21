@@ -1,0 +1,14 @@
+@import '../../variables';
+
+.header-wrapper {
+  position: relative;
+
+  .logo-block {
+    display: inline-block;
+
+    .logo-left {
+      height: (30/$df-fs)*$rem;
+      margin-right: (16/$df-fs)*$rem;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "../../variables";
+
+.label-dark-blue-wrapper {
+  font-size: (15 / $df-fs) * $rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--white);
+  padding: (16 / $df-fs) * $rem;
+  border-bottom: 1px solid var(--white);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .icon-append {
+    font-size: (20 / $df-fs) * $rem;
+  }
+
+  .icon-prepend {
+    @media (max-width: 575px) {
+      // display: none;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../variables";
+
+.template-menu-left-wrapper {
+  //write responsive for tablet
+  @media (min-width: 576px) {
+    .left-side-component {
+      width: $widthMenuLeft;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+      overflow: auto;
+      height: calc(100vh - #{$heightHeader});
+      height: calc(var(--vh, 1vh) * 100 - #{$heightHeader});
+      z-index: 1;
+      //position: absolute;
+      float: left;
+    }
+    .right-side-component {
+      height: calc(100vh - #{$heightHeader});
+      height: calc(var(--vh, 1vh) * 100 - #{$heightHeader});
+      margin-left: #{$widthMenuLeft};
+      overflow: auto;
+    }
+  }
+}
