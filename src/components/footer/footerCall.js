@@ -7,7 +7,7 @@ const FooterCall = (props) => {
   const { className = "" } = props;
   return (
     <div className={ClassNames("footer footer-call-wrapper", className)}>
-      Footer
+      React detect image
     </div>
   );
 };

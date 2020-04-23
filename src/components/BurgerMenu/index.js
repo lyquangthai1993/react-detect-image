@@ -1,29 +1,28 @@
 /* eslint-disable no-undef */
-import React, { useContext } from "react";
-import avatar from "../../images/user.svg";
-import { slide as Menu } from "react-burger-menu";
-import "./burger-menu.scss";
-import AuthContext from "../../auth/authContext";
-import SearchBox from "../SearchBox";
-import ListGroupAppend from "../ListGroupAppend";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as PropTypes from "prop-types";
-import history from "../../utils/history";
+import React, { useContext } from "react";
+import { slide as Menu } from "react-burger-menu";
 import { routeLinks } from "../../app-routes";
+import AuthContext from "../../auth/authContext";
+import avatar from "../../images/user.svg";
+import history from "../../utils/history";
+import ListGroupAppend from "../ListGroupAppend";
+import "./burger-menu.scss";
 
 const stylesMenu = {
   bmOverlay: {
-    background: "rgba(65, 64, 66, 0.65)",
+    background: "rgba(65, 64, 66, 0.65)"
   },
   bmBurgerButton: { zIndex: 1001 },
   bmCrossButton: {
     height: "20px",
-    width: "20px",
+    width: "20px"
   },
   bmCross: {
     height: "24px",
     width: "3px"
-  },
+  }
 };
 const BurgerMenu = props => {
   const {
@@ -31,8 +30,7 @@ const BurgerMenu = props => {
     pageWrapId = "",
     burgerButtonClassName = "",
     searchText = "",
-    onSearch = () => {
-    }
+    onSearch = () => {}
   } = props;
   const authContext = useContext(AuthContext);
 
@@ -55,7 +53,7 @@ const BurgerMenu = props => {
     >
       <div className={"upper"}>
         <div className={"logo-wrapper text-right"}>
-          <img alt={"logo-blue"} src={avatar} className={"logo"}/>
+          <img alt={"logo-blue"} src={avatar} className={"logo"} />
         </div>
         <div className={"user-info paragraph-heading-charcoal"}>
           <img
@@ -70,16 +68,6 @@ const BurgerMenu = props => {
           <span>{nickname}</span>
         </div>
       </div>
-
-      <div className={"lower bg-dusk-blue"}>
-        <SearchBox
-          theme={"white"}
-          value={searchText}
-          onSearch={text => {
-            onSearch(text);
-          }}
-        />
-      </div>
       <ListGroupAppend
         theme={"white"}
         appendIcon={
@@ -90,19 +78,19 @@ const BurgerMenu = props => {
         }
         listItem={[
           {
-            name: "About us",
+            name: "Home",
             theme: "p-base",
             action: () => {
               history.push(routeLinks.about);
-            },
+            }
           },
           {
-            name: "Logout",
+            name: "Training",
             theme: "p-base",
             action: () => {
               authContext.handleUserLogout();
-            },
-          },
+            }
+          }
         ]}
       />
       <div className={"app-version paragraph-small"}>{appVersion}</div>
@@ -115,6 +103,6 @@ BurgerMenu.propTypes = {
   outerContainerId: PropTypes.string,
   searchText: PropTypes.string,
   burgerButtonClassName: PropTypes.string,
-  onSearch: PropTypes.func,
+  onSearch: PropTypes.func
 };
 export default BurgerMenu;
