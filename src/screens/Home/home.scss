@@ -34,10 +34,7 @@
   }
 
   .header-wrapper {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding-right: (55 / $df-fs) * $rem;
+    
 
     .logo-block {
       padding: (18 / $df-fs) * $rem 0 (16 / $df-fs) * $rem (16 / $df-fs) * $rem;

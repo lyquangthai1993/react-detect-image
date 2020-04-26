@@ -1,0 +1,17 @@
+import * as {{constantCase name}}_ACTION_TYPES from "./{{properCase name}}ActionTypes";
+
+export const initial{{properCase name}}State = {
+errors: ""
+};
+
+export const {{properCase name}}Reducer = (state, action) => {
+
+switch (action.type) {
+
+default:
+return {
+...state,
+errors: "action.type not found"
+};
+}
+};

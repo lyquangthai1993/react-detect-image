@@ -16,7 +16,7 @@ module.exports = plop => {
         name: "name",
         message: "What is your component name?",
         validate: requireField("name")
-      },
+      }
     ],
     actions: [
       // {
@@ -34,16 +34,16 @@ module.exports = plop => {
       {
         type: "add",
         path:
-            "src/components/{{pascalCase name}}/{{pascalCase name}}.scss",
+          "src/components/{{pascalCase name}}/{{pascalCase name}}.scss",
         templateFile:
-            "plop-templates/Component/Component.scss.hbs",
+          "plop-templates/Component/Component.scss.hbs"
       },
       {
         type: "add",
         path: "src/components/{{pascalCase name}}/index.js",
-        templateFile: "plop-templates/Component/index.js.hbs",
+        templateFile: "plop-templates/Component/index.js.hbs"
       }
-    ],
+    ]
   });
   
   plop.setGenerator("screen", {
@@ -54,14 +54,14 @@ module.exports = plop => {
         name: "name",
         message: "What is your page name?",
         validate: requireField("name")
-      },
+      }
     ],
     actions: [
       {
         type: "add",
         path: "src/screens/{{pascalCase name}}/{{dashCase name}}.js",
         templateFile:
-            "plop-templates/Page/Page.js.hbs",
+          "plop-templates/Page/Page.js.hbs"
       },
       // {
       //   type: "add",
@@ -72,10 +72,10 @@ module.exports = plop => {
       {
         type: "add",
         path:
-            "src/screens/{{pascalCase name}}/{{dashCase name}}.scss",
+          "src/screens/{{pascalCase name}}/{{dashCase name}}.scss",
         templateFile:
-            "plop-templates/Page/Page.scss.hbs",
-      },
+          "plop-templates/Page/Page.scss.hbs"
+      }
       // {
       //   type: "add",
       //   path: "src/screens/{{pascalCase name}}/index.js",
@@ -99,7 +99,7 @@ module.exports = plop => {
       //   pattern: `/* PLOP_INJECT_EXPORT */`,
       //   template: `\t{{pascalCase name}},`,
       // },
-    ],
+    ]
   });
   
   plop.setGenerator("service", {
@@ -110,33 +110,33 @@ module.exports = plop => {
         name: "name",
         message: "What is your service name?",
         validate: requireField("name")
-      },
+      }
     ],
     actions: [
       {
         type: "add",
         path: "src/services/{{camelCase name}}.js",
-        templateFile: "plop-templates/service.js.hbs",
+        templateFile: "plop-templates/service.js.hbs"
       },
       {
         type: "add",
         path: "src/services/index.js",
         templateFile: "plop-templates/injectable-index.js.hbs",
-        skipIfExists: true,
+        skipIfExists: true
       },
       {
         type: "append",
         path: "src/services/index.js",
         pattern: `/* PLOP_INJECT_IMPORT */`,
-        template: `import {{camelCase name}} from './{{camelCase name}}';`,
+        template: `import {{camelCase name}} from './{{camelCase name}}';`
       },
       {
         type: "append",
         path: "src/services/index.js",
         pattern: `/* PLOP_INJECT_EXPORT */`,
-        template: `\t{{camelCase name}},`,
+        template: `\t{{camelCase name}},`
       }
-    ],
+    ]
   });
   
   plop.setGenerator("hook", {
@@ -147,32 +147,56 @@ module.exports = plop => {
         name: "name",
         message: "What is your hook name?",
         validate: requireField("name")
-      },
+      }
     ],
     actions: [
       {
         type: "add",
         path: "src/hooks/{{camelCase name}}.js",
-        templateFile: "plop-templates/hook.js.hbs",
+        templateFile: "plop-templates/hook.js.hbs"
       },
       {
         type: "add",
         path: "src/hooks/index.js",
         templateFile: "plop-templates/injectable-index.js.hbs",
-        skipIfExists: true,
+        skipIfExists: true
       },
       {
         type: "append",
         path: "src/hooks/index.js",
         pattern: `/* PLOP_INJECT_IMPORT */`,
-        template: `import {{camelCase name}} from './{{camelCase name}}';`,
+        template: `import {{camelCase name}} from './{{camelCase name}}';`
       },
       {
         type: "append",
         path: "src/hooks/index.js",
         pattern: `/* PLOP_INJECT_EXPORT */`,
-        template: `\t{{camelCase name}},`,
+        template: `\t{{camelCase name}},`
+      }
+    ]
+  });
+  
+  plop.setGenerator("store", {
+    description: "Create a store",
+    prompts: [
+      {
+        type: "input",
+        name: "name",
+        message: "What is your store name?",
+        validate: requireField("name")
       }
     ],
+    actions: [
+      {
+        type: "addMany",
+        destination: "src/store/{{properCase name}}/",
+        base: "plop-templates/Store/",
+        templateFiles: "**",
+        skipIfExists: true,
+        transform: (config) => {
+          console.log(config);
+        }
+      }
+    ]
   });
 };

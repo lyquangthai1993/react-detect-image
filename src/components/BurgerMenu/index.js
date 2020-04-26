@@ -5,7 +5,6 @@ import React, { useContext } from "react";
 import { slide as Menu } from "react-burger-menu";
 import { routeLinks } from "../../app-routes";
 import AuthContext from "../../auth/authContext";
-import avatar from "../../images/user.svg";
 import history from "../../utils/history";
 import ListGroupAppend from "../ListGroupAppend";
 import "./burger-menu.scss";
@@ -28,15 +27,13 @@ const BurgerMenu = props => {
   const {
     outerContainerId = "",
     pageWrapId = "",
-    burgerButtonClassName = "",
-    searchText = "",
-    onSearch = () => {}
+    burgerButtonClassName = ""
   } = props;
   const authContext = useContext(AuthContext);
 
   const { authState = {} } = authContext;
   const { profile = {} } = authState;
-  const { nickname = "", picture = "" } = profile || {};
+  const { nickname = "" } = profile || {};
 
   return (
     <Menu
@@ -53,18 +50,13 @@ const BurgerMenu = props => {
     >
       <div className={"upper"}>
         <div className={"logo-wrapper text-right"}>
-          <img alt={"logo-blue"} src={avatar} className={"logo"} />
+          <img
+            alt={"logo-blue"}
+            src={"./logo192.png"}
+            className={"logo img-fluid"}
+          />
         </div>
         <div className={"user-info paragraph-heading-charcoal"}>
-          <img
-            alt={"avatar"}
-            className={"avatar rounded-circle"}
-            src={picture}
-            onError={e => {
-              e.target.onerror = null;
-              e.target.src = avatar;
-            }}
-          />
           <span>{nickname}</span>
         </div>
       </div>
@@ -81,14 +73,21 @@ const BurgerMenu = props => {
             name: "Home",
             theme: "p-base",
             action: () => {
-              history.push(routeLinks.about);
+              history.push(routeLinks.home);
             }
           },
           {
             name: "Training",
             theme: "p-base",
             action: () => {
-              authContext.handleUserLogout();
+              history.push(routeLinks.training);
+            }
+          },
+          {
+            name: "Detect",
+            theme: "p-base",
+            action: () => {
+              history.push(routeLinks.detect);
             }
           }
         ]}

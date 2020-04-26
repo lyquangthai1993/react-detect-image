@@ -10,8 +10,8 @@ export const routeLinks = {
   root: "/",
   success: "/success",
   home: "/home",
-  login: "/login",
-  about: "/about",
+  training: "/training",
+  detect: "/detect",
 };
 
 export const PrivateRoute = ({ component: Component, auth }) => (
