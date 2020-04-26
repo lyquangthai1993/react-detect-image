@@ -8,18 +8,21 @@ import Header from "../../components/header/header";
 import TextBox from "../../components/TextBox";
 import localForageApp from "localforage";
 import "./home.scss";
+import BaseButton from "../../components/BaseButton";
 const validateForm = Yup.object().shape({
   // name: Yup.string().required("Name is required")
 });
 const Home = () => {
   // const permissionCheck = new Permission(permissions);
-  const [searchTextState, setSearchTextState] = useState("")
+  const [searchTextState, setSearchTextState] = useState("");
 
-  const [apiURL, setApiURL] = useState(async ()=>{
-    let api = await localForageApp.get('')
-    return localForageApp || "http://";
-  });
-  useEffect(() => {}, []);
+  const [apiURL, setApiURL] = useState("");
+  useEffect(async () => {
+    let temp = await localForageApp.getItem("apiURL");
+    console.log(temp);
+    setApiURL(temp || "http://");
+  }, []);
+  
   return (
     <div className={"home-wrapper"} id={"home_page"}>
       <BurgerMenu
@@ -41,7 +44,10 @@ const Home = () => {
           validateOnChange={true}
           enableReinitialize={true}
           validationSchema={validateForm}
-          onSubmit={e => {}}
+          onSubmit={values => {
+            const { apiURL = "" } = values;
+            localForageApp.setItem("apiURL", apiURL);
+          }}
         >
           {({
             values,
@@ -62,6 +68,13 @@ const Home = () => {
                 touched={touched.apiURL}
                 onBlur={handleBlur}
                 onChange={handleChange}
+              />
+              <BaseButton
+                className={"text-link-white btn-add-product d-inline-block"}
+                variant={"main"}
+                inline={true}
+                content={"Confirm hire"}
+                type={"submit"}
               />
             </form>
           )}

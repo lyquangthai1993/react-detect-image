@@ -193,6 +193,7 @@ const App = () => {
         hideProgressBar={true}
         className={"my-toast-container"}
       />
+      
       <AuthContext.Provider
         value={{
           //Auth Reducer
@@ -211,11 +212,9 @@ const App = () => {
       >
         <LookupDataContext.Provider value={lookupDataState}>
           <CoreDataContext.Provider value={coreDataState}>
-
             <SearchDataContext.Provider value={searchDataState}>
                 <AppRoutes />
               </SearchDataContext.Provider>
-
           </CoreDataContext.Provider>
         </LookupDataContext.Provider>
       </AuthContext.Provider>
