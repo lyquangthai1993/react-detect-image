@@ -3,7 +3,6 @@ import Proptypes from "prop-types";
 import ClassNames from "classnames";
 import "./style.scss";
 import "../BurgerMenu/burger-menu.scss";
-import logoWhite from "../../images/Permobil_White.png";
 import BurgerMenu from "../BurgerMenu";
 import { handleRouteToSearchPage } from "../../utils/functionHelper";
 
@@ -55,11 +54,6 @@ const HeaderDetailPage = props => {
           {textReturn}
         </div>
         <div className={"h3-white-bold title-page flex-fill"}>{titlePage}</div>
-        <div className={ClassNames("logo-block", hideMobile)}>
-          <div className={"d-inline-block"}>
-            <img className={"logo"} alt={"logo-white"} src={logoWhite}/>
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -1,14 +1,14 @@
 import { Formik } from "formik";
+import localForageApp from "localforage";
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import * as Yup from "yup";
+import BaseButton from "../../components/BaseButton";
 import BurgerMenu from "../../components/BurgerMenu";
 import FooterCall from "../../components/footer/footerCall";
 import Header from "../../components/header/header";
 import TextBox from "../../components/TextBox";
-import localForageApp from "localforage";
 import "./home.scss";
-import BaseButton from "../../components/BaseButton";
 const validateForm = Yup.object().shape({
   // name: Yup.string().required("Name is required")
 });
@@ -17,12 +17,15 @@ const Home = () => {
   const [searchTextState, setSearchTextState] = useState("");
 
   const [apiURL, setApiURL] = useState("");
-  useEffect(async () => {
-    let temp = await localForageApp.getItem("apiURL");
-    console.log(temp);
-    setApiURL(temp || "http://");
+  useEffect(() => {
+    const setupAPILink = async () => {
+      let temp = await localForageApp.getItem("apiURL");
+      console.log(temp);
+      setApiURL(temp || "http://");
+    };
+    setupAPILink();
   }, []);
-  
+
   return (
     <div className={"home-wrapper"} id={"home_page"}>
       <BurgerMenu
@@ -35,6 +38,7 @@ const Home = () => {
       />
 
       <Header />
+
       <div className="container">
         <Formik
           initialValues={{
@@ -73,7 +77,7 @@ const Home = () => {
                 className={"text-link-white btn-add-product d-inline-block"}
                 variant={"main"}
                 inline={true}
-                content={"Confirm hire"}
+                content={"Save"}
                 type={"submit"}
               />
             </form>
